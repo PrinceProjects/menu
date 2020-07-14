@@ -1,7 +1,5 @@
 let box = document.getElementById("box");
 
-
-// To check current status of elements
 let menuObj = {
 	btnPlayS : true,
 	btnHtpS : true,
@@ -25,16 +23,13 @@ let menuObj = {
         btnExit = document.createElement("button"),
         btnSingle = document.createElement("button"),
         btnMulti = document.createElement("button"),
-        // btnBack = document.createElement("button");
-        btnBack2 = document.createElement("button");
-        btnBack3 = document.createElement("button");
-        btnBack4 = document.createElement("button");
-        btnBack5 = document.createElement("button");
-        btnBack6 = document.createElement("button");
-
-        htpText = document.createElement("p");
+        btnBack2 = document.createElement("button"),
+        btnBack3 = document.createElement("button"),
+        btnBack4 = document.createElement("button"),
+        btnBack5 = document.createElement("button"),
+        btnBack6 = document.createElement("button"),
+        htpText = document.createElement("p"),
         aboutText = document.createElement("p");
-
 
 btnPlay.innerHTML = "PLAY"
 btnHtp.innerHTML = "HOW TO PLAY"
@@ -42,14 +37,12 @@ btnAbout.innerHTML = "ABOUT"
 btnExit.innerHTML = "EXIT"
 btnSingle.innerHTML = "SINGLE PLAYER"
 btnMulti.innerHTML = "MULTI PLAYER"
-// btnBack.innerHTML = "BACK"
 btnBack2.innerHTML = "BACK"
 btnBack3.innerHTML = "BACK"
 btnBack4.innerHTML = "BACK"
 btnBack5.innerHTML = "BACK"
 btnBack6.innerHTML = "BACK"
 
-// Contents
 htpText.innerHTML = "Instructions on how to play the game."
 aboutText.innerHTML = "Creator : Prince Agrawal"
 
@@ -59,7 +52,6 @@ box.appendChild(btnAbout);
 box.appendChild(btnExit);
 box.appendChild(btnSingle);
 box.appendChild(btnMulti);
-// box.appendChild(btnBack);
 box.appendChild(btnBack2);
 box.appendChild(btnBack3);
 box.appendChild(btnBack4);
@@ -71,8 +63,7 @@ box.appendChild(aboutText);
 
 
 function menucheck(){
-	// Front Menu
-
+	
 	if(menuObj.btnPlayS){
 		btnPlay.style.display = "flex"
 	}else{
@@ -93,8 +84,7 @@ function menucheck(){
 	}else{
 		btnExit.style.display = "none"
 	}
-
-	//  Play menu
+	
 	if(menuObj.btnSingleS){
 		btnSingle.style.display = "flex"
 	}else{
@@ -105,13 +95,6 @@ function menucheck(){
 	}else{
 		btnMulti.style.display = "none"
 	}
-
-	// Back btns
-	// if(menuObj.btnBackS){
-	// 	btnBack.style.display = "flex"
-	// }else{
-	// 	btnBack.style.display = "none"
-	// }
 
 	if(menuObj.btnBackS2){
 		btnBack2.style.display = "flex"
@@ -156,16 +139,13 @@ function menucheck(){
 	}
 }
 
-menucheck()
-	
-	
+menucheck()	
 
 btnPlay.addEventListener('click',playEvent);
 btnHtp.addEventListener('click', htpEvent);
 btnAbout.addEventListener('click', aboutEvent);
 btnExit.addEventListener('click', exitEvent);
 
-//  Back Buttons Event Listeners
 btnBack2.addEventListener('click', btnBack2Event);
 
 function btnBack2Event(e){
@@ -182,8 +162,6 @@ function btnBack2Event(e){
 	menuObj.btnBackS6 = false
 	menuObj.htpTextS = false
 	menuObj.aboutTextS = false
-
-
 	menucheck()
 }
 
@@ -243,7 +221,6 @@ function playEvent(e){
 }
 
 function htpEvent(e){
-	// console.log("hi")
 	menuObj.btnPlayS = false
 	menuObj.btnHtpS = false
 	menuObj.btnAboutS = false
